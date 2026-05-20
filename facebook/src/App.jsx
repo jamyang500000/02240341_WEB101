@@ -1,4 +1,5 @@
 import './styles/app.css'
+
 import { TopNav } from './components/TopNav.jsx'
 import { LeftSidebar } from './components/LeftSidebar.jsx'
 import { RightSidebar } from './components/RightSidebar.jsx'
@@ -6,21 +7,29 @@ import { Feed } from './components/Feed.jsx'
 
 function App() {
   return (
-    <div className="appShell">
+    <div className="app">
+
+      {/* NAVBAR */}
       <TopNav />
 
-      <main className="layout" role="main">
-        <aside className="col colLeft" aria-label="Shortcuts">
+      {/* MAIN LAYOUT */}
+      <main className="main-layout">
+
+        {/* LEFT SIDEBAR */}
+        <aside className="sidebar">
           <LeftSidebar />
         </aside>
 
-        <section className="col colCenter" aria-label="Feed">
+        {/* CENTER FEED */}
+        <section className="feed">
           <Feed />
         </section>
 
-        <aside className="col colRight" aria-label="Contacts">
+        {/* RIGHT SIDEBAR */}
+        <aside className="rightbar">
           <RightSidebar />
         </aside>
+
       </main>
     </div>
   )
